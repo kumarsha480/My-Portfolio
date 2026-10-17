@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Kumar - UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Sahil Kumar, a UI/UX designer with 3 years of experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar">
+        <a href="index.html" class="logo">SK.</a>
+        <div class="nav-links">
+            <a href="work.html" class="nav-item">Work</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="mailto:Kumarsha480@gmail.com" class="nav-item">Contact</a>
+            <a href="./assets/sahil-kumar-resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-item">Resume</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="smooth-scroll-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-video-wrapper">
+                <video autoplay loop muted playsinline preload="auto" class="intro-video" id="heroVideo">
+                    <source src="./assets/portfolio/intro-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-controls">
+                    <button class="hero-control-btn" id="playPauseBtn" aria-label="Play/Pause">
+                        <!-- Pause Icon initially because autoplay is true -->
+                        <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                        <!-- Play Icon hidden initially -->
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                    <button class="hero-control-btn" id="muteUnmuteBtn" aria-label="Mute/Unmute">
+                        <!-- Muted Icon initially because muted is true -->
+                        <svg class="mute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        <!-- Unmuted Icon hidden initially -->
+                        <svg class="unmute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="intro-section" id="about">
+            <div class="intro-grid">
+                <div class="intro-left fade-up">
+                    <span class="label">WHO</span>
+                    <span class="sub-label">Selected work below ↓</span>
+                </div>
+                <div class="intro-right fade-up">
+                    <p class="intro-text">
+                        I'm a UI/UX designer with 3 years of experience building B2B, SaaS, websites, eCommerce web applications, graphic design, and video editing. I help teams move beyond the current state by turning complexity into clear, usable experiences that feel intentional and easy to use.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section class="work-section" id="work">
+            <div class="work-header fade-up">
+                <div class="work-labels">
+                    <span class="label">FEATURED WORK</span>
+                    <span class="label">SELECTED PROJECTS / 06</span>
+                </div>
+                <h1 class="huge-title">WORK THAT MOVES. <img src="./assets/portfolio/arrow-down-right.svg" class="custom-arrow arrow-down" alt="Arrow"></h1>
+            </div>
+
+            <div class="projects-grid">
+                <div class="projects-column">
+                    <!-- Project 1 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-1.png" alt="Critical Flytech" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>Critical Flytech</h3>
+                                <p>TWO LEGACIES, ONE IDENTITY</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-3.png" alt="Brilean" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>Brilean</h3>
+                                <p>STARTING OVER TO GO FURTHER</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-5.png" alt="supermodular.ai" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>supermodular.ai</h3>
+                                <p>ONE ORGANISM, MANY FORMS</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-column stagger-col">
+                    <!-- Project 2 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-2.png" alt="Modern Tax" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>Modern Tax</h3>
+                                <p>A HAPPY TAX FIRM</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-4.png" alt="Sensei" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>Sensei</h3>
+                                <p>RETAIL THAT FEELS RIGHT AND RUNS BETTER</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card fade-up">
+                        <div class="project-image-wrapper">
+                            <img src="./assets/portfolio/project-6.png" alt="Quill & Orki" class="project-img">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-details">
+                                <h3>Quill & Orki</h3>
+                                <p>SAME SPINE, DIFFERENT BRAND</p>
+                            </div>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow project-arrow" alt="Arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="graphic">
+            <div class="services-grid">
+                <div class="services-left fade-up">
+                    <span class="label">MY SERVICES</span>
+                    <p class="services-desc">
+                        I help B2B, SaaS, websites, and eCommerce web applications move beyond the current state through UI/UX, graphic design, and video editing. Across 3 years of work, I've shaped product experiences, visual systems, and launch-ready content for digital teams.
+                    </p>
+                </div>
+                <div class="services-right">
+                    <!-- Service 1: UI/UX -->
+                    <div class="service-item active fade-up" data-pinned="true">
+                        <div class="service-header" role="button" tabindex="0" aria-expanded="true">
+                            <h2>UI/UX</h2>
+                            <span class="toggle-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="vertical-line" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-content-wrapper">
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>RESEARCH</li>
+                                    <li>USER FLOWS</li>
+                                    <li>WIREFRAMES</li>
+                                    <li>PROTOTYPING</li>
+                                    <li>INTERACTION</li>
+                                    <li>USABILITY</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>UX AUDITS</li>
+                                    <li>JOURNEY MAPPING</li>
+                                    <li>VISUAL HIERARCHY</li>
+                                    <li>UI DESIGN</li>
+                                    <li>UX WRITING</li>
+                                    <li>RESPONSIVE UI</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>DESIGN SYSTEMS</li>
+                                    <li>ACCESSIBILITY</li>
+                                    <li>MOTION</li>
+                                    <li>TESTING</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2: WEBSITES -->
+                    <div class="service-item fade-up">
+                        <div class="service-header" role="button" tabindex="0" aria-expanded="false">
+                            <h2>WEBSITES</h2>
+                            <span class="toggle-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="vertical-line" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-content-wrapper">
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>LANDING PAGES</li>
+                                    <li>PORTFOLIO SITES</li>
+                                    <li>MARKETING SITES</li>
+                                    <li>CONTENT HUBS</li>
+                                    <li>RESPONSIVE LAYOUTS</li>
+                                    <li>LAUNCH PAGES</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>INFORMATION ARCHITECTURE</li>
+                                    <li>NAVIGATION SYSTEMS</li>
+                                    <li>CONTENT STRATEGY</li>
+                                    <li>CONVERSION FLOWS</li>
+                                    <li>MOBILE-FIRST DESIGN</li>
+                                    <li>DESKTOP LAYOUTS</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>PAGE TEMPLATES</li>
+                                    <li>COMPONENT LIBRARIES</li>
+                                    <li>HANDOFF-READY SPECS</li>
+                                    <li>ACCESSIBILITY REVIEWS</li>
+                                    <li>DESIGN QA</li>
+                                    <li>LAUNCH SUPPORT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3: ECOMMERCE -->
+                    <div class="service-item fade-up">
+                        <div class="service-header" role="button" tabindex="0" aria-expanded="false">
+                            <h2>ECOMMERCE</h2>
+                            <span class="toggle-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="vertical-line" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-content-wrapper">
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>PRODUCT PAGES</li>
+                                    <li>CATEGORY PAGES</li>
+                                    <li>CHECKOUT FLOWS</li>
+                                    <li>SEARCH RESULTS</li>
+                                    <li>FILTERING SYSTEMS</li>
+                                    <li>CART RECOVERY</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>PRODUCT INFORMATION</li>
+                                    <li>REVIEWS AND RATINGS</li>
+                                    <li>TRUST BADGES</li>
+                                    <li>SHIPPING AND RETURNS</li>
+                                    <li>UPSELL AND CROSS-SELL</li>
+                                    <li>PROMOTIONAL BANNERS</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>MOBILE COMMERCE</li>
+                                    <li>CONVERSION OPTIMIZATION</li>
+                                    <li>A/B TESTING SUPPORT</li>
+                                    <li>PAYMENT FLOWS</li>
+                                    <li>ORDER CONFIRMATION</li>
+                                    <li>POST-PURCHASE UX</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: WEB APPS -->
+                    <div class="service-item fade-up">
+                        <div class="service-header" role="button" tabindex="0" aria-expanded="false">
+                            <h2>WEB APPS</h2>
+                            <span class="toggle-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="vertical-line" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-content-wrapper">
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>DASHBOARD DESIGN</li>
+                                    <li>ADMIN PANELS</li>
+                                    <li>WORKSPACE LAYOUTS</li>
+                                    <li>DATA VISUALIZATION</li>
+                                    <li>TABLES AND LISTS</li>
+                                    <li>SETTINGS AND PREFERENCES</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>ONBOARDING FLOWS</li>
+                                    <li>EMPTY STATES</li>
+                                    <li>ERROR STATES</li>
+                                    <li>LOADING STATES</li>
+                                    <li>SEARCH AND FILTERING</li>
+                                    <li>BULK ACTIONS</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>COMPONENT LIBRARIES</li>
+                                    <li>DESIGN SYSTEMS</li>
+                                    <li>DEVELOPER HANDOFF</li>
+                                    <li>ACCESSIBILITY AUDITS</li>
+                                    <li>INTERACTION DESIGN</li>
+                                    <li>MOTION GUIDANCE</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: GRAPHIC DESIGN -->
+                    <div class="service-item fade-up">
+                        <div class="service-header" role="button" tabindex="0" aria-expanded="false">
+                            <h2>GRAPHIC DESIGN</h2>
+                            <span class="toggle-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="vertical-line" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-content-wrapper">
+                            <div class="service-content">
+                                <ul class="service-list">
+                                    <li>LOGO DESIGN</li>
+                                    <li>BRAND IDENTITY</li>
+                                    <li>COLOR SYSTEMS</li>
+                                    <li>TYPOGRAPHY SYSTEMS</li>
+                                    <li>ICON SYSTEMS</li>
+                                    <li>BRAND GUIDELINES</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>CAROUSELS</li>
+                                    <li>HERO BANNERS</li>
+                                    <li>SOCIAL MEDIA ADS</li>
+                                    <li>EMAIL TEMPLATES</li>
+                                    <li>PRESENTATION DECKS</li>
+                                    <li>PITCH MATERIALS</li>
+                                </ul>
+                                <ul class="service-list">
+                                    <li>INFOGRAPHICS</li>
+                                    <li>STATIC POSTS</li>
+                                    <li>STORY TEMPLATES</li>
+                                    <li>REELS AND SHORTS</li>
+                                    <li>MOTION GRAPHICS</li>
+                                    <li>LAUNCH ASSETS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section class="approach-section" id="approachSection">
+            <div class="approach-grid">
+                <div class="approach-left fade-up">
+                    <span class="label">MY APPROACH</span>
+                </div>
+                <div class="approach-right fade-up">
+                    <p class="approach-text">
+                        I start by listening deeply to your challenges, ambitions, and everything in between. Then I create from research, behavior, data, and inspiration that strikes from anywhere: a song, a pattern, a memory. I work across UI/UX, graphic design, and video editing, not in silos, but in one integrated, evolving process. My systems are built to stretch, shift, and stand the test of time. I do it by providing direction and sharing control. I know expertise lives on both sides.
+                    </p>
+                    <div class="approach-btn-wrapper">
+                        <button type="button" class="btn-primary approach-toggle-btn" id="approachToggleBtn" aria-expanded="false" aria-controls="approachPopsContainer">
+                            <span class="btn-text">Show me</span>
+                            <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow approach-btn-arrow" alt="Arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pop Media Collage (Images & Video) -->
+            <div class="approach-pops-container" id="approachPopsContainer" aria-hidden="true">
+                <!-- 1. Top-Left: Wireframes & Sketches -->
+                <div class="approach-pop-item pop-item-wireframe" data-rotate="-2">
+                    <img src="./assets/approach/wireframe.jpg" alt="UX Wireframe and interface sketches" loading="lazy">
+                </div>
+
+                <!-- 2. Top-Center: Neon T-shirt with Discord Badge -->
+                <div class="approach-pop-item pop-item-tshirt" data-rotate="0">
+                    <img src="./assets/approach/tshirt.jpg" alt="Neon green streetwear graphic tee" loading="lazy">
+                    <div class="pop-discord-badge">
+                        <div class="discord-badge-header">
+                            <span class="discord-badge-dot"></span>
+                            <span class="discord-badge-title">2 New</span>
+                            <span class="discord-badge-time">• 15 mins ago</span>
+                        </div>
+                        <div class="discord-badge-msg">
+                            <span class="discord-badge-icon">💬</span>
+                            <span><strong>Discord</strong>: modern whatever ✌️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Top-Right-Center: "Modern" Typography Card -->
+                <div class="approach-pop-item pop-item-typography" data-rotate="1">
+                    <img src="./assets/approach/typography.jpg" alt="Modern serif typography repeating pattern" loading="lazy">
+                </div>
+
+                <!-- 4. Top-Right: Video Card with Mini Controls -->
+                <div class="approach-pop-item pop-item-video" data-rotate="-1">
+                    <div class="pop-video-card">
+                        <video class="pop-video-element" id="approachPopVideo" loop muted playsinline preload="metadata">
+                            <source src="./assets/approach/video.mp4" type="video/mp4">
+                        </video>
+                        <div class="pop-video-controls">
+                            <button type="button" class="pop-video-play-btn" id="popVideoPlayBtn" aria-label="Toggle video playback">
+                                <span class="pop-v-icon pause-icon">❚❚</span>
+                                <span class="pop-v-icon play-icon" style="display:none;">▶</span>
+                            </button>
+                            <div class="pop-video-scrub">
+                                <div class="pop-video-scrub-bar" id="popVideoScrubBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Mid-Right: Pixel Art Sticker -->
+                <div class="approach-pop-item pop-item-pixel" data-rotate="3">
+                    <img src="./assets/approach/pixel.jpg" alt="Retro pixel art character and icons" loading="lazy">
+                </div>
+
+                <!-- 6. Bottom-Left: Dense UI Moodboard -->
+                <div class="approach-pop-item pop-item-moodboard" data-rotate="-1">
+                    <img src="./assets/approach/moodboard.jpg" alt="Dark UI design system and moodboard" loading="lazy">
+                </div>
+
+                <!-- 7. Bottom-Center: Design Research & System Mindmap -->
+                <div class="approach-pop-item pop-item-research" data-rotate="1.5">
+                    <img src="./assets/approach/research.jpg" alt="Design research flowchart and mindmap notes" loading="lazy">
+                </div>
+
+                <!-- 8. Bottom-Right: Sunlit Studio Workspace -->
+                <div class="approach-pop-item pop-item-workspace" data-rotate="-0.5">
+                    <img src="./assets/approach/workspace.jpg" alt="Warm sunlit wooden workspace with laptop and coffee" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <span class="label fade-up">WHY WE ARE HERE</span>
+            <h2 class="huge-quote accent-text fade-up">
+                For me, design isn't decoration. It's a transformation. It evolves what's stuck, strengthens what matters, and makes space for something better.
+            </h2>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section" id="contact">
+            <div class="footer-top fade-up">
+                <div class="footer-left">
+                    <span class="label">CONTACT US</span>
+                </div>
+                <div class="footer-right">
+                    <h3>I AM INDUSTRY & TIME-ZONE AGNOSTIC.</h3>
+                    <p>Because design isn't limited by context, only by imagination.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom fade-up">
+                <h1 class="massive-text accent-text">
+                    LET'S MAKE<br>SOMETHING THAT<br>MATTERS. <img src="./assets/portfolio/arrow-up-right.svg" class="custom-arrow arrow-up" alt="Arrow">
+                </h1>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
