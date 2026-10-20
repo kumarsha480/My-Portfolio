@@ -63,8 +63,9 @@ runGit(['add', '.']);
 console.log('\n--- Step 6: Committing changes ---');
 runGit(['commit', '-m', 'Fix asset paths and folder names for Netlify deployment'], true);
 
-console.log('\n--- Step 7: Pushing to GitHub (main) ---');
+console.log('\n--- Step 7: Pushing to GitHub (main & kumarsha480) ---');
 console.log('If a browser window pops up asking you to sign in to GitHub, please click Sign in/Authorize!\n');
 runGit(['push', '-u', 'origin', 'main', '--force']);
+runGit(['push', 'origin', 'main:kumarsha480', '--force']);
 
 console.log('\n🎉 Finished! Check your portfolio at https://sahilkumar.work/');
