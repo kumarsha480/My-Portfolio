@@ -90,15 +90,15 @@ function updateSlides(animate = true) {
             zIndex = 10;
         } else if (isNext) {
             slide.classList.add('is-next');
-            targetX = 104; // Visible on screen at the right
+            targetX = 105; // Visible on screen at the right
             targetScale = 0.85;
-            targetOpacity = (window.innerWidth <= 768) ? 0 : 0.72;
+            targetOpacity = 0.72;
             zIndex = 5;
         } else if (isPrev) {
             slide.classList.add('is-prev');
-            targetX = -104; // Visible on screen at the left
+            targetX = -105; // Visible on screen at the left
             targetScale = 0.85;
-            targetOpacity = (window.innerWidth <= 768) ? 0 : 0.72;
+            targetOpacity = 0.72;
             zIndex = 5;
         } else {
             targetX = diff > 0 ? 210 : -210;
