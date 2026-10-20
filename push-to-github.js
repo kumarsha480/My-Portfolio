@@ -67,4 +67,4 @@ console.log('\n--- Step 7: Pushing to GitHub (main) ---');
 console.log('If a browser window pops up asking you to sign in to GitHub, please click Sign in/Authorize!\n');
 runGit(['push', '-u', 'origin', 'main', '--force']);
 
-console.log('\n🎉 Finished! Check Netlify at https://sahilkumar11.netlify.app/');
+console.log('\n🎉 Finished! Check your portfolio at https://sahilkumar.work/');
