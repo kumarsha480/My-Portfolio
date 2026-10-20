@@ -92,13 +92,13 @@ function updateSlides(animate = true) {
             slide.classList.add('is-next');
             targetX = 104; // Visible on screen at the right
             targetScale = 0.85;
-            targetOpacity = 0.72;
+            targetOpacity = (window.innerWidth <= 768) ? 0 : 0.72;
             zIndex = 5;
         } else if (isPrev) {
             slide.classList.add('is-prev');
             targetX = -104; // Visible on screen at the left
             targetScale = 0.85;
-            targetOpacity = 0.72;
+            targetOpacity = (window.innerWidth <= 768) ? 0 : 0.72;
             zIndex = 5;
         } else {
             targetX = diff > 0 ? 210 : -210;
@@ -233,6 +233,11 @@ window.addEventListener('wheel', (e) => {
 
 // Initial positioning on page load
 updateSlides(false);
+
+// Update positioning on window resize
+window.addEventListener('resize', () => {
+    updateSlides(false);
+});
 
 // Remove Netlify HUD / "Powered by Netlify" Badge
 const removeNetlifyBadge = () => {

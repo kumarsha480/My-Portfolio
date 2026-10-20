@@ -333,21 +333,32 @@ if (approachToggleBtn && approachSection && approachPopsContainer) {
                 }
             );
         } else {
-            // Mobile stagger fade
+            // Mobile stagger fade with clearProps so grid flow stays pure
             gsap.killTweensOf(popItems);
             gsap.fromTo(popItems,
-                { opacity: 0, y: 30 },
+                { opacity: 0, y: 25 },
                 {
                     opacity: 1,
                     y: 0,
                     duration: 0.45,
-                    stagger: 0.06,
+                    stagger: 0.05,
                     ease: "power2.out",
+                    clearProps: "transform",
                     onComplete: () => {
                         ScrollTrigger.refresh();
                     }
                 }
             );
+
+            // Gently reveal the expanded collage below the button
+            setTimeout(() => {
+                const rect = approachPopsContainer.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                window.scrollTo({
+                    top: scrollTop + rect.top - 80,
+                    behavior: 'smooth'
+                });
+            }, 120);
         }
 
         ScrollTrigger.refresh();
@@ -377,6 +388,7 @@ if (approachToggleBtn && approachSection && approachPopsContainer) {
                 y: 15,
                 duration: 0.25,
                 ease: "power2.in",
+                clearProps: "transform",
                 onComplete: () => {
                     finalizeClose();
                 }

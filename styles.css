@@ -1147,6 +1147,87 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
 
     .project-card {
         max-width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
+    }
+
+    .project-info {
+        order: -1 !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+    }
+
+    /* Approach Section Tablet Portrait */
+    .approach-section.is-pops-open {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding-bottom: 4rem !important;
+    }
+
+    .approach-pops-container {
+        position: relative !important;
+        inset: auto !important;
+        display: none;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
+        margin-top: 2.5rem !important;
+        width: 100% !important;
+        height: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .approach-section.is-pops-open .approach-pops-container {
+        display: grid !important;
+    }
+
+    .approach-pop-item {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        height: 220px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .approach-pop-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .pop-item-tshirt {
+        grid-column: span 2 !important;
+        height: 300px !important;
+    }
+
+    .pop-item-video {
+        grid-column: span 2 !important;
+        height: 280px !important;
+        aspect-ratio: 16/9 !important;
+    }
+
+    .pop-item-video .pop-video-card,
+    .pop-item-video .pop-video-element {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .pop-item-workspace {
+        grid-column: span 2 !important;
+        height: 280px !important;
     }
 
     .footer-top {
@@ -1266,7 +1347,9 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
     }
 
     .project-card {
-        gap: 1rem;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.85rem !important;
     }
 
     .project-image-wrapper {
@@ -1281,7 +1364,9 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
     }
 
     .project-info {
-        margin-top: 0.5rem;
+        order: -1 !important;
+        margin-bottom: 0.65rem !important;
+        margin-top: 0 !important;
     }
 
     .project-details h3 {
@@ -1344,25 +1429,33 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
         justify-content: center;
     }
 
+    .approach-section {
+        overflow: visible !important;
+    }
+
     .approach-section.is-pops-open {
-        min-height: auto;
-        padding-bottom: 3.5rem;
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding-bottom: 4rem !important;
     }
 
     .approach-pops-container {
-        position: relative;
-        inset: auto;
+        position: relative !important;
+        inset: auto !important;
         display: none;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.85rem;
-        margin-top: 2rem;
-        height: auto;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.85rem !important;
+        margin-top: 2rem !important;
+        width: 100% !important;
+        height: auto !important;
         opacity: 1 !important;
         visibility: visible !important;
     }
 
     .approach-section.is-pops-open .approach-pops-container {
-        display: grid;
+        display: grid !important;
     }
 
     .approach-pop-item {
@@ -1372,21 +1465,43 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
         right: auto !important;
         bottom: auto !important;
         width: 100% !important;
+        height: 180px !important;
         opacity: 1 !important;
         transform: none !important;
         pointer-events: auto !important;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
     }
 
-    .pop-item-tshirt,
-    .pop-item-workspace {
-        grid-column: span 2;
+    .approach-pop-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .pop-item-tshirt {
+        grid-column: span 2 !important;
+        height: 240px !important;
     }
 
     .pop-item-video {
-        aspect-ratio: 16/9;
+        grid-column: span 2 !important;
+        height: 220px !important;
+        aspect-ratio: 16/9 !important;
+    }
+
+    .pop-item-video .pop-video-card,
+    .pop-item-video .pop-video-element {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .pop-item-workspace {
+        grid-column: span 2 !important;
+        height: 220px !important;
     }
 
     /* Quote Section */
@@ -1457,12 +1572,18 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
     }
 
     .approach-pops-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .approach-pop-item {
+        height: 200px !important;
     }
 
     .pop-item-tshirt,
+    .pop-item-video,
     .pop-item-workspace {
-        grid-column: span 1;
+        grid-column: span 1 !important;
+        height: 220px !important;
     }
 }
 
@@ -1567,6 +1688,10 @@ body.work-page-body[data-theme="dark"],
     cursor: none;
     user-select: none;
     will-change: transform, opacity;
+}
+
+.slide-top-header {
+    display: none;
 }
 
 .slide-card {
@@ -1753,17 +1878,29 @@ body.work-page-body[data-theme="dark"] .slider-arrow-btn,
     }
 
     .work-stage-header {
-        margin-bottom: 0.85rem;
-        max-width: 100%;
+        display: none !important;
     }
 
-    #activeProjectTitle {
-        font-size: clamp(1.2rem, 5vw, 1.6rem);
+    .slide-top-header {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 0.75rem !important;
+        text-align: left !important;
+    }
+
+    .slide-top-title {
+        font-family: var(--primary-font);
+        font-size: clamp(1.35rem, 5.5vw, 1.75rem) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.02em !important;
+        color: var(--text-color) !important;
+        margin: 0 !important;
+        line-height: 1.15 !important;
     }
 
     .work-slider-stage {
-        width: clamp(270px, 82vw, 380px);
-        height: clamp(180px, 55vw, 255px);
+        width: clamp(280px, 86vw, 390px);
+        height: clamp(240px, 68vw, 330px);
     }
 
     .slider-nav-controls {
