@@ -1005,83 +1005,348 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
 }
 
 /* ==========================================================================
-   Responsive
+   Touch Devices Optimization (Tablets, iPad, iPhone, Android)
    ========================================================================== */
+@media (hover: none), (pointer: coarse) {
+    .cursor {
+        display: none !important;
+    }
+    * {
+        cursor: auto !important;
+    }
+    button, a, input, [role="button"] {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* ==========================================================================
+   Responsive Design Breakpoints
+   ========================================================================== */
+
+/* 1. Tablet Landscape & Small Laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .intro-grid, .services-grid, .approach-grid, .footer-top {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .navbar {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .intro-section,
+    .work-section,
+    .services-section,
+    .approach-section,
+    .quote-section,
+    .footer-section {
+        padding: 5rem 2.5rem;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr 1.6fr;
+        gap: 2.5rem;
+    }
+
+    .huge-title {
+        font-size: clamp(3rem, 7.5vw, 6rem);
     }
 
     .projects-grid {
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
-    .project-card[style] {
-        margin-top: 0 !important; /* Remove staggered layout on mobile */
+    .projects-column {
+        gap: 5rem;
+    }
+
+    .stagger-col {
+        margin-top: 6rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1.6fr;
+        gap: 2.5rem;
+    }
+
+    .service-header h2 {
+        font-size: clamp(2rem, 4.5vw, 3.2rem);
+    }
+
+    .service-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr 1.6fr;
+        gap: 3rem;
+    }
+
+    .approach-text {
+        font-size: 1.5rem;
     }
 
     .approach-section.is-pops-open {
-        min-height: 740px;
-        max-height: 820px;
-        padding: 4rem 2rem 5rem;
+        min-height: 720px;
+        max-height: 800px;
+        padding: 4rem 2.5rem 5rem;
     }
 
-    .pop-item-wireframe { width: 150px; top: 2%; left: 1%; }
-    .pop-item-tshirt { width: 165px; top: 0%; left: 17%; }
-    .pop-item-typography { width: 125px; top: 3%; left: 45%; }
-    .pop-item-video { width: 125px; top: 2%; right: 4%; }
-    .pop-item-pixel { width: 85px; top: 18%; right: 2%; }
-    .pop-item-moodboard { width: 155px; bottom: 11%; left: 2%; }
-    .pop-item-research { width: 160px; bottom: 10%; left: 38%; }
-    .pop-item-workspace { width: 185px; bottom: 8.5%; right: 2%; }
+    .pop-item-wireframe { width: 140px; top: 2%; left: 1%; }
+    .pop-item-tshirt { width: 155px; top: 0%; left: 18%; }
+    .pop-item-typography { width: 120px; top: 3%; left: 46%; }
+    .pop-item-video { width: 120px; top: 2%; right: 3%; }
+    .pop-item-pixel { width: 80px; top: 18%; right: 2%; }
+    .pop-item-moodboard { width: 145px; bottom: 10%; left: 2%; }
+    .pop-item-research { width: 150px; bottom: 9%; left: 38%; }
+    .pop-item-workspace { width: 175px; bottom: 8%; right: 2%; }
+
+    .huge-quote {
+        font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .massive-text {
+        font-size: clamp(3rem, 9vw, 7rem);
+    }
 }
 
-@media (max-width: 768px) {
-    .hero-controls {
-        bottom: 1.5rem;
-        left: 1.5rem;
-        gap: 0.75rem;
+/* 2. Tablet Portrait (max-width: 900px) */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 1.25rem 2rem;
     }
 
-    .hero-control-btn {
-        width: 40px;
-        height: 40px;
+    .intro-grid,
+    .services-grid,
+    .approach-grid,
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
-    .hero-control-btn svg {
-        width: 15px;
-        height: 15px;
-    }
-
-    .intro-section, .work-section, .services-section, .approach-section, .quote-section, .footer-section {
-        padding: 4rem 2rem;
+    .services-desc {
+        max-width: 100%;
+        margin-top: 1rem;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    .projects-column {
+        gap: 3.5rem;
+    }
+
+    .stagger-col {
+        margin-top: 0 !important;
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .footer-top {
+        margin-bottom: 4rem;
+    }
+}
+
+/* 3. Mobile Phones (Android & iOS) (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* Fixed top navigation - mobile sleek pill */
+    .navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0.85rem 1.15rem;
+        padding-top: max(0.85rem, env(safe-area-inset-top));
+        padding-left: max(1.15rem, env(safe-area-inset-left));
+        padding-right: max(1.15rem, env(safe-area-inset-right));
+    }
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    .nav-links {
+        padding: 0.4rem 0.85rem;
+        gap: 0.75rem;
+        font-size: 0.82rem;
+        border-radius: 40px;
+    }
+
+    .nav-item {
+        font-size: 0.82rem;
+    }
+
+    .theme-toggle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .theme-toggle svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    /* Hero section & controls */
+    .hero {
+        height: 100svh;
+        height: 100vh;
+    }
+
+    .hero-controls {
+        bottom: max(1.5rem, env(safe-area-inset-bottom));
+        left: 1.25rem;
+        gap: 0.65rem;
+    }
+
+    .hero-control-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero-control-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Main Section paddings on mobile */
+    .intro-section,
+    .work-section,
+    .services-section,
+    .approach-section,
+    .quote-section,
+    .footer-section {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .intro-header-col {
+        margin-bottom: 0.5rem;
+    }
+
+    .intro-statement {
+        font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+        line-height: 1.45;
+    }
+
+    /* Work section */
+    .work-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .work-labels {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .huge-title {
+        font-size: clamp(2rem, 8.5vw, 3.2rem);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .custom-arrow.arrow-down {
+        width: 28px;
+        height: 28px;
+    }
+
+    .project-card {
+        gap: 1rem;
+    }
+
+    .project-image-wrapper {
+        border-radius: 12px;
+        aspect-ratio: 16/10;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-info {
+        margin-top: 0.5rem;
+    }
+
+    .project-details h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-details p {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+    }
+
+    .custom-arrow.project-arrow {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Services Section */
+    .service-header {
+        padding: 1.35rem 0;
+    }
+
+    .service-header h2 {
+        font-size: clamp(1.35rem, 5.2vw, 1.85rem);
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+    }
+
+    .toggle-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .toggle-icon svg {
+        width: 20px;
+        height: 20px;
     }
 
     .service-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-bottom: 2rem;
+        gap: 1.25rem;
+        padding-bottom: 1.75rem;
     }
 
-    .navbar {
-        top: 1rem;
-        right: 1rem;
+    .service-list li {
+        font-size: 0.85rem;
     }
 
-    .nav-links {
-        padding: 0.5rem 1rem;
-        gap: 1rem;
+    /* Approach Section */
+    .approach-text {
+        font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+        line-height: 1.55;
+        margin-bottom: 1.8rem;
     }
 
-    /* Approach pops mobile grid */
+    .btn-primary {
+        padding: 0.85rem 1.6rem;
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
     .approach-section.is-pops-open {
         min-height: auto;
-        padding-bottom: 4rem;
+        padding-bottom: 3.5rem;
     }
 
     .approach-pops-container {
@@ -1089,8 +1354,8 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
         inset: auto;
         display: none;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-top: 2.5rem;
+        gap: 0.85rem;
+        margin-top: 2rem;
         height: auto;
         opacity: 1 !important;
         visibility: visible !important;
@@ -1110,6 +1375,8 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
         opacity: 1 !important;
         transform: none !important;
         pointer-events: auto !important;
+        border-radius: 12px;
+        overflow: hidden;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
@@ -1121,7 +1388,84 @@ body:not([data-theme="dark"]) .approach-toggle-btn .approach-btn-arrow {
     .pop-item-video {
         aspect-ratio: 16/9;
     }
+
+    /* Quote Section */
+    .huge-quote {
+        font-size: clamp(1.6rem, 6.2vw, 2.4rem);
+        line-height: 1.25;
+        margin-top: 1.25rem;
+    }
+
+    /* Footer Section */
+    .footer-right h3 {
+        font-size: 1.25rem;
+    }
+
+    .footer-right p {
+        font-size: 0.95rem;
+    }
+
+    .massive-text {
+        font-size: clamp(2rem, 8.5vw, 3.5rem);
+        line-height: 1.05;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .custom-arrow.arrow-up {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        width: 28px;
+        height: 28px;
+        margin-left: 0.25rem;
+    }
+
+    .footer-section {
+        padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+    }
 }
+
+/* 4. Small Mobile Phones (max-width: 400px, e.g. iPhone SE / Galaxy S mini) */
+@media (max-width: 400px) {
+    .navbar {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        padding: 0.35rem 0.7rem;
+        gap: 0.55rem;
+        font-size: 0.76rem;
+    }
+
+    .nav-item {
+        font-size: 0.76rem;
+    }
+
+    .huge-title {
+        font-size: 1.85rem;
+    }
+
+    .massive-text {
+        font-size: 1.85rem;
+    }
+
+    .approach-pops-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pop-item-tshirt,
+    .pop-item-workspace {
+        grid-column: span 1;
+    }
+}
+
 
 /* ==========================================================================
    Work Showcase Page (work.html)
@@ -1368,14 +1712,63 @@ body.work-page-body[data-theme="dark"] .slider-arrow-btn,
     border-color: transparent;
 }
 
-@media (max-width: 768px) {
+/* Work Showcase Responsive (Tablets & Mobile) */
+@media (max-width: 1024px) {
+    .work-page-main {
+        padding-top: 4.5rem;
+    }
+
+    .work-stage-header {
+        max-width: 500px;
+        margin-bottom: 1.5rem;
+    }
+
+    #activeProjectTitle {
+        font-size: 1.8rem;
+    }
+
     .work-slider-stage {
-        width: 78vw;
-        height: 56vw;
+        width: clamp(300px, 46vw, 500px);
+        height: clamp(210px, 32vw, 350px);
+    }
+
+    .slider-arrow-btn {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.work-page-body {
+        height: 100svh;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .work-page-main {
+        height: 100svh;
+        height: 100vh;
+        padding: 5rem 1rem 1.5rem;
+        justify-content: center;
+    }
+
+    .work-stage-header {
+        margin-bottom: 0.85rem;
+        max-width: 100%;
+    }
+
+    #activeProjectTitle {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+    }
+
+    .work-slider-stage {
+        width: clamp(270px, 82vw, 380px);
+        height: clamp(180px, 55vw, 255px);
     }
 
     .slider-nav-controls {
-        padding: 0 0.5rem;
+        padding: 0 0.25rem;
+        top: calc(50% - 1.25rem);
     }
 
     .slider-arrow-btn {
@@ -1383,10 +1776,254 @@ body.work-page-body[data-theme="dark"] .slider-arrow-btn,
         height: 40px;
     }
 
+    .slider-arrow-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .slide-info-row {
+        margin-top: 0.65rem;
+        height: auto;
+    }
+
+    .slide-num {
+        font-size: 0.78rem;
+    }
+
     .slide-meta {
-        font-size: 0.62rem;
+        font-size: 0.64rem;
+        gap: 0.15rem;
+    }
+
+    .meta-item strong {
+        margin-right: 0.2rem;
     }
 }
+
+/* ==========================================================================
+   About Page & Content Pages (about.html, case-study.html)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.about-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 4.5rem;
+    align-items: start;
+    margin-bottom: 5rem;
+}
+
+.about-text-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.about-text-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--muted-text);
+    margin-bottom: 1.4rem;
+}
+
+.about-contact-msg {
+    margin-top: 2rem !important;
+    font-weight: 600 !important;
+    color: var(--text-color) !important;
+}
+
+.about-contact-details {
+    font-size: 1.1rem !important;
+    font-weight: 500;
+    color: var(--text-color) !important;
+}
+
+.about-contact-details a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s;
+}
+
+.about-contact-details a:hover {
+    opacity: 0.8;
+}
+
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-profile-img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.about-resume-section {
+    margin-top: 4rem;
+}
+
+.about-resume-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.resume-item h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.resume-date {
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 1.5rem;
+}
+
+/* Footer on about and case study pages */
+body > footer {
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body > footer p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--text-color);
+    opacity: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: opacity 0.2s, transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: var(--accent-color);
+}
+
+/* Responsive styles for About & Content pages */
+@media (max-width: 900px) {
+    .about-wrapper {
+        padding-top: 6.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .about-image-wrapper {
+        order: -1;
+    }
+
+    .about-profile-img {
+        max-width: 340px;
+    }
+
+    .resume-item {
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 1rem 0;
+    }
+
+    .resume-date {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .about-wrapper {
+        padding-top: 5.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .about-text-content h1 {
+        font-size: clamp(2rem, 7vw, 2.6rem);
+        margin-bottom: 1.25rem;
+    }
+
+    .about-text-content p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .about-profile-img {
+        max-width: 280px;
+        border-radius: 14px;
+    }
+
+    body > footer {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 2.5rem 1.25rem;
+    }
+}
+
 
 /* Hide Netlify HUD badge / Powered by Netlify */
 #nl-hud-frame,

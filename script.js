@@ -82,10 +82,12 @@ function setTheme(theme) {
 const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
 setTheme(savedTheme);
 
-themeToggleBtn.addEventListener('click', () => {
-    const isCurrentlyDark = document.body.hasAttribute('data-theme') || document.documentElement.hasAttribute('data-theme');
-    setTheme(isCurrentlyDark ? 'light' : 'dark');
-});
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const isCurrentlyDark = document.body.hasAttribute('data-theme') || document.documentElement.hasAttribute('data-theme');
+        setTheme(isCurrentlyDark ? 'light' : 'dark');
+    });
+}
 
 // --------------------------------------------------------
 // GSAP Reveal Animations
