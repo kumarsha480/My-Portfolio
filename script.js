@@ -464,6 +464,16 @@ if (approachToggleBtn && approachSection && approachPopsContainer) {
         });
     }
 }
-
-
+// --------------------------------------------------------
+// Remove Netlify HUD / "Powered by Netlify" Badge
+// --------------------------------------------------------
+const removeNetlifyBadge = () => {
+    const badge = document.getElementById('nl-hud-frame') || document.querySelector('iframe[title*="Netlify"], iframe[id^="nl-hud"]');
+    if (badge) {
+        badge.remove();
+    }
+};
+removeNetlifyBadge();
+const hudObserver = new MutationObserver(removeNetlifyBadge);
+hudObserver.observe(document.documentElement, { childList: true, subtree: true });
 

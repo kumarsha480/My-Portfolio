@@ -1388,4 +1388,15 @@ body.work-page-body[data-theme="dark"] .slider-arrow-btn,
     }
 }
 
-
+/* Hide Netlify HUD badge / Powered by Netlify */
+#nl-hud-frame,
+iframe[title*="Netlify"],
+iframe[id^="nl-hud"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
