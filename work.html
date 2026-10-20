@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         (function() {
+            if (window.location.hostname === 'sahilkumar11.netlify.app') {
+                window.location.replace('https://sahilkumar.work' + window.location.pathname + window.location.search + window.location.hash);
+                return;
+            }
             const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
             if (savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
